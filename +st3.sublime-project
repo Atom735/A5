@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"name": "inc MinGW",
+			"path": "F:\\programs\\MinGW-W64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\i686-w64-mingw32\\include"
+		}
+	],
+}
