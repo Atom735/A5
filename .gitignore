@@ -1,4 +1,5 @@
 *.exe
 *.sublime-workspace
 *.o
+*.x
 
