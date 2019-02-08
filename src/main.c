@@ -19,10 +19,20 @@ int main ( int argc, char const *argv[] )
 
 
     FILE * CONST pFOut  = fopen ( "src/main.x", "wb" );
-
-    UINT nSizeWrited = 0;
-    while ( nSizeWrited < nSize ) {
-        nSizeWrited += fwrite ( pFileBuf + nSizeWrited, 1, nSize - nSizeWrited, pFOut );
+    UINT nLine = 0;
+    UINT i0 = 0;
+    VOID _newLine ( ) {
+        fprintf ( pFOut, "#line %d\n", ++nLine );
+    }
+    _newLine ( );
+    for ( UINT i = 0; i < nSize; ++i ) {
+        if ( pFileBuf [ i ] == '\n' ) {
+            if ( i > i0 ) {
+                fprintf ( pFOut, "%.*s\n", i - i0, pFileBuf + i0 );
+            }
+            _newLine ( );
+            i0 = i+1;
+        }
     }
 
     fclose ( pFOut );
