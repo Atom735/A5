@@ -1,9 +1,9 @@
 .PHONY : all clean
 
 CC := gcc.exe
-CFLAGS := -mwindows -municode -march=pentium4 -Wall -O3
+CFLAGS := -march=pentium4 -Wall -O3
 CPPFLAGS :=
-LDFLAGS := -mwindows -municode -march=pentium4 -Wall -O3
+LDFLAGS :=
 
 OUT_EXE := a5.exe
 

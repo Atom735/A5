@@ -1,15 +1,6 @@
-#include <windows.h>
+#include <stdio.h>
 
-/* информация о системе */
-SYSTEM_INFO g_SystemInfo    = { };
-
-/* Точка входа в приложение */
-INT APIENTRY wWinMain (
-    HINSTANCE hInstance,
-    HINSTANCE hPrevInstance,
-    LPWSTR lpCmdLine,
-    INT nShowCmd )
+int main ( int argc, char const *argv[] )
 {
-    GetSystemInfo ( &g_SystemInfo );
     return 0;
 }
