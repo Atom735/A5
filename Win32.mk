@@ -1,7 +1,7 @@
 .PHONY : all clean
 
 CC := gcc.exe
-CFLAGS := -march=pentium4 -Wall -O3
+CFLAGS := -march=pentium4 -Wall -O3 -mwindows -municode
 CPPFLAGS :=
 LDFLAGS :=
 
@@ -15,7 +15,7 @@ clean:
 	DEL /S *.exe
 
 OBJECTS := \
-	src/main.o
+	src/main_win.o
 
 
 $(OUT_EXE) : $(OBJECTS)
@@ -25,3 +25,4 @@ $(OUT_EXE) : $(OBJECTS)
 	$(CC) -o $@ -c $(CPPFLAGS) $(CFLAGS) $<
 
 src/main.o : src/main.c
+src/main_win.o : src/main_win.c
